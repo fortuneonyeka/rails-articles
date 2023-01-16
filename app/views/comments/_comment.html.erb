@@ -1,11 +1,15 @@
 <% unless comment.archived? %>
-    <p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+
+ <%= button_to 'Destroy Comment', [comment.article, comment],
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
 <% end %>

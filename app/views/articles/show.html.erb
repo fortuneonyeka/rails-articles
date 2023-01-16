@@ -3,7 +3,8 @@
 <p><%= @article.body%></p>
 <%= link_to "Home", articles_path%>
 <%= link_to "Edit",  edit_article_path%>
-<%= link_to "Delete", @article, data: { 'method': :delete, 'confirm': "Are you sure?" } %>
+<%= button_to "Delete", @article, method: :delete, data: {confirm: "Are you sure?" } %>
+
 
 
 <h2>Comments</h2>
