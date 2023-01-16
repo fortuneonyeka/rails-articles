@@ -1,12 +1,15 @@
 <h1>Articles</h1>
 <%= link_to "New Article", new_article_path%>
-
+<br>
+This blog has <%= Article.public_count%> articles
 <ul>
 <% @articles.each do |article| %>
+<% unless article.archived?%>
   <li>
   <%= article.title %>
    <br>
       <%= link_to "Read More ...", article_path(article)%>
   </li>
 <% end %>
+ <% end %>
 </ul>
