@@ -4,3 +4,11 @@
 <%= link_to "Home", articles_path%>
 <%= link_to "Edit",  edit_article_path%>
 <%= link_to "Delete", @article, data: { 'method': :delete, 'confirm': "Are you sure?" } %>
+
+
+<h2>Comments</h2>
+
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/comment_form'%>
